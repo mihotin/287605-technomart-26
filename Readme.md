@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Дмитрий Михотин](https://up.htmlacademy.ru/htmlcss/26/user/287605).
-* Наставник: [Вадим Новаш] (https://htmlacademy.ru/profile/stakeout).
+* Наставник: [Вадим Новаш](https://up.htmlacademy.ru/htmlcss/26/user/8589).
 
 ---
 
