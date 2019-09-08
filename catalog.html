@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Техномарт</title>
+    <title>Каталог</title>
   </head>
   <body>
     <header class="main-header">
@@ -10,18 +10,19 @@
         <a href="index.html">Техномарт</a>
         <span>Поиск:</span> <!-- Здесь должна быть форма Писка -->
         <a class="bookmark" href="#">Закладки: 0</a>
-        <a class="basket" href="#">Корзина: 0</a>
+        <a class="basket" href="#">Корзина: 10</a>
         <a class="order" href="#">Оформить заказ</a>
       </div>
       <div class="menu-middle">
-        <h1>Интернет-магазин<br>
+        <p>Интернет-магазин<br>
             строительных материалов<br>
-            и инструментов для ремонта</h1>
+            и инструментов для ремонта</p>
         <p>+7 (812) 555-05-55</p>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        <ul class="authorization">
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Регистрация</a></li>
+        <a class="account" href="#">Равшан Джамшутович</a>
+        <ul class="account-menu">
+          <li><a href="#">Мои заказы</a></li>
+          <li><a href="#">Личный кабинет</a></li>
         </ul>
       </div>
       <nav class="main-menu">
@@ -38,44 +39,20 @@
     </header>
 
     <main>
-      <section class="promo-block">
-        <h2 class="visually-hidden">Комплекс услуг</h2>
-        <!--Здесь будет секция Промо-блока -->
-      </section>
-      <section class="popular-items">
-        <h2>Популярные товары:</h2>
-        <!--Здесь будет секция Попултные товары -->
-      </section>
-      <section class="popular-brands">
-        <h2>Популярные производители:</h2>
-        <!--Здесь будет секция Попултные производители-->
-      </section>
-      <section class="services">
-        <h2>Сервисы</h2>
-        <!--Здесь будет секция Сервисы-->
-      </section>
-
-      <section class="company-info">
-        <h2>Компания «Техномарт»</h2>
-        <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и<br>
-           строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-           Техномарт работает со многими транспортными компаниями:</p>
-        <ul>
-	        <li>Деловые линии</li>
-	        <li>Автотрейдинг</li>
-	        <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="company-button" href="#">Подробнее о компании</a>
-      </section>
-
-      <section class="contacts">
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами,<br>
-           заехав в наш офис:</p>
-        <a class="map" href="#"><img src="https://via.placeholder.com/300x158" alt="Карта"></a>
-        <button type="button">Заблудились? Напишите нам!</button>
-      </section>
+      <ul class="breadcrumbs">
+       <li><a href="catalog.html">Каталог</a></li>
+       <li><a href="#">Инструмент</a></li>
+       <li class="breadcrumbs-current">Перфораторы</li>
+     </ul>
+     <h1>Перфораторы</h1>
+     <section class="filters">
+       <h2 class="visually-hidden">Фильтр товаров</h2>
+          <!-- Здесь будет форма -->
+     </section>
+     <section class="catalog">
+       <h2 class="visually-hidden">Каталог инструментов</h2>
+          <!-- Здесь будет Каталог -->
+     </section>
     </main>
 
     <footer class="main-footer">
@@ -113,5 +90,6 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
       </div>
     </footer>
+
   </body>
 </html>
