@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Каталог</title>
+    <title>Каталог компании: Техномарт</title>
   </head>
   <body>
     <header class="main-header">
       <div class="menu-top">
-        <a href="index.html">Техномарт</a>
+        <div class="logo">
+          <a href="index.html"><img src="https://via.placeholder.com/109x19" alt="Техномарт"></a>
+        </div>
         <span>Поиск:</span> <!-- Здесь должна быть форма Писка -->
-        <a class="bookmark" href="#">Закладки: 0</a>
-        <a class="basket" href="#">Корзина: 10</a>
+        <a class="bookmark" href="#">Закладки:<span>0</span></a>
+        <a class="basket" href="#">Корзина:<span>10</span></a>
         <a class="order" href="#">Оформить заказ</a>
       </div>
       <div class="menu-middle">
-        <p>Интернет-магазин<br>
-            строительных материалов<br>
+        <p class="main-title">Интернет-магазин
+            строительных материалов
             и инструментов для ремонта</p>
-        <p>+7 (812) 555-05-55</p>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <a class="phone" href="tel:8812550555">+7 (812) 555-05-55</a>
+        <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         <a class="account" href="#">Равшан Джамшутович</a>
         <ul class="account-menu">
           <li><a href="#">Мои заказы</a></li>
@@ -29,7 +31,7 @@
         <ul>
           <li><a href="#">Главная</a></li>
           <li><a href="#">Компания</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a class="current">Каталог</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Спецпредложения</a></li>
           <li><a href="#">Доставка</a></li>
@@ -38,11 +40,11 @@
       </nav>
     </header>
 
-    <main>
+    <main class="main-content">
       <ul class="breadcrumbs">
        <li><a href="catalog.html">Каталог</a></li>
        <li><a href="#">Инструмент</a></li>
-       <li class="breadcrumbs-current">Перфораторы</li>
+       <li class="current">Перфораторы</li>
      </ul>
      <h1>Перфораторы</h1>
      <section class="filters">
@@ -55,11 +57,11 @@
      </section>
     </main>
 
-    <footer class="main-footer">
-      <div class="footer-nav">
-          <a class="logo" href="#">Техномарт</a>
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-           +7 (812) 555-05-55</p>
+    <footer class="main-footer"> <!-- Подвал сайта -->
+      <div class="top-row">
+        <div class="footer-logo">
+          <img src="https://via.placeholder.com/138x23" alt="Техномарт">
+        </div>
         <ul class="top-navigation">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
@@ -67,27 +69,29 @@
           <li><a href="#">Доставка</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <ul class="bottom-navigation">
+      </div>
+      <div class="middle-row"
+        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+           +7 (812) 555-05-55</p>
+        <ul class="middle-navigation">
           <li><a href="#">Материалы</a></li>
           <li><a href="#">Техника</a></li>
           <li><a href="#">Инструмент</a></li>
           <li><a href="#">Спецпредложения</a></li>
         </ul>
       </div>
-      <div class="fotter-contacts">
-        <p>&copy; 2010–2019 Компания «Техномарт»<br>
+      <div class="bottom-row">
+        <p class="copyright">&copy; 2010–2019 Компания «Техномарт»<br>
            Все права защищены</p>
         <div class="social">
-          <ul>
-            <li class="social-button"><a href="#">Вк</a></li>
-            <li class="social-button"><a href="#">Fb</a></li>
-            <li class="social-button"><a href="#">Inst</a></li>
+          <ul class="social-list">
+            <li class="social-button social-button-vk"><a href="#">Вк</a></li>
+            <li class="social-button social-button-fb"><a href="#">Fb</a></li>
+            <li class="social-button social-button-ins"><a href="#">Inst</a></li>
           </ul>
         </div>
-        <p>Обратная связь:</p>
-        <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        <p>Разработано —</p>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        <p class="feedback">Обратная связь:<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+        <p class="designed">Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">htmlacademy.ru</a></p>
       </div>
     </footer>
 
