@@ -22,8 +22,10 @@
         <p class="main-title">Интернет-магазин
             строительных материалов
             и инструментов для ремонта</p>
-        <a class="phone" href="tel:8812550555" title="Позвонить сейчас">+7 (812) 555-05-55</a>
-        <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        <div class="contacts">
+          <a class="phone" href="tel:+7812550555" title="Позвонить сейчас">+7 (812) 555-05-55</a>
+          <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
         <ul class="authorization">
           <li><a href="#">Войти</a></li>
           <li><a href="#">Регистрация</a></li>
@@ -45,25 +47,21 @@
     <main class="main-content">
       <section class="promo-block"> <!-- Промо блок -->
         <h2 class="visually-hidden">Комплекс услуг</h2>
-          <div class="promo-item">
+          <div class="promo-item materials">
             <h3>Материалы</h3>
-            <a href="#">На любой вкус</a>
-            <img src="https://via.placeholder.com/44x65" alt="icon">
+            <a href="#">На любой вкус</a>  
           </div>
-          <div class="promo-item">
+          <div class="promo-item materials">
             <h3>Инструмент</h3>
             <a href="#">На все случаи</a>
-            <img src="https://via.placeholder.com/44x65" alt="icon">
           </div>
-          <div class="promo-item">
+          <div class="promo-item materials">
             <h3>Техника</h3>
-            <a href="#">Для стройки</a>
-            <img src="https://via.placeholder.com/44x65" alt="icon">
+            <a href="#">Для стройки</a>  
           </div>
-          <div class="promo-item">
+          <div class="promo-item materials">
             <h3>Материалы</h3>
             <a href="#">На любой вкус</a>
-            <img src="https://via.placeholder.com/44x65" alt="icon">
           </div>
           <div class="slider"> <!-- Разметка сладера по образцу из курсов -->
               <div class="slider-controls">
@@ -85,6 +83,8 @@
                    <img src="https://via.placeholder.com/620x266" alt="Слайд перфораторы">
                    <a class="button" href="catalog.html">Открыть каталог</a>
                  </div>
+                 <button class="prev" type="button"></button>
+                 <button class="next" type="button"></button>
                </div>
           </div>
           <div class="promo-item">
@@ -106,19 +106,19 @@
         <div class="catalog popular">
           <article class="catalog-item">
             <h3>Перфоратор BOSCH BFG 9000</h3>
-            <del>32500 Р.</del>
+            <s>32500 Р.</s>
             <span>25500 Р.</span>
             <img src="https://via.placeholder.com/220x318" alt="Перфоратор BOSCH BFG 9000">
           </article>
           <article class="catalog-item">
             <h3>Перфоратор BOSCH BFG 3000</h3>
-            <del>22500 Р.</del>
+            <s>22500 Р.</s>
             <span>15500 Р.</span>
             <img src="https://via.placeholder.com/220x318" alt="Перфоратор BOSCH BFG 3000">
           </article>
           <article class="catalog-item">
             <h3>Перфоратор BOSCH BFG 6000</h3>
-            <del>30500 Р.</del>
+            <s>30500 Р.</s>
             <span>25500 Р.</span>
             <img src="https://via.placeholder.com/220x318" alt="Перфоратор BOSCH BFG 6000">
           </article>
@@ -130,10 +130,10 @@
         </div>
       </section>
       <section class="popular-brands">  <!-- Популрные производители -->
-        <div class="container">
+        <header class="popular-header">
           <h2>Популярные производители:</h2>
           <a class="button" href="#">Все производители</a>
-        </div>
+        </header>
         <ul class="brand-list">
           <li><a href="#"><img src="https://via.placeholder.com/126x37" alt="Bosch"></a></li>
           <li><a href="#"><img src="https://via.placeholder.com/123x40" alt="Makita"></a></li>
@@ -146,11 +146,11 @@
         </ul>
       </section>
       <section class="services"> <!-- Сервисы -->
-        <div class="container-services">
+        <header class="services-header">
           <h2>Сервисы</h2>
           <p>Хороший интернет-магазин отличается от плохого не только ценами!
              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        </div>
+          </header>
         <div class="slider-services">
           <div class="service-controls">
             <input type="radio" id="btn-3" name="slide" checked>
@@ -164,7 +164,7 @@
             <div class="service-slide">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br>
-                 к вашему подъезду совершенно бесплатно!<br>
+                 к вашему подъезду совершенно бесплатно!
                  Ведь мы неплохо заработаем,<br>
                  поднимая его на ваш этаж!</p>
               <img src="https://via.placeholder.com/468x261" alt="Лого доставка">
@@ -172,8 +172,8 @@
             <div class="service-slide">
               <h3>Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит,<br>
-                 а также в случае пожара, спровоцированного его возгоранием,<br>
-                 вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                 а также в случае пожара, спровоцированного его возгоранием,
+                 вы всегда можете быть уверены в нашей гарантии. Мы обменяем
                  сгоревший товар на новый.<br>
                  Дом уж восстановите как-нибудь сами.</p>
               <img src="https://via.placeholder.com/389x283" alt="Лого гарантия">
@@ -220,7 +220,7 @@
         <div class="footer-logo">
           <img src="https://via.placeholder.com/138x23" alt="Техномарт">
         </div>
-        <ul class="top-navigation">
+        <ul class="footer-navigation">
           <li><a href="#">Компания</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Каталог</a></li>
@@ -229,7 +229,7 @@
         </ul>
       </div>
       <div class="middle-row">
-        <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+        <p class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
            +7 (812) 555-05-55</p>
         <ul class="middle-navigation">
           <li><a href="#">Материалы</a></li>
