@@ -1,0 +1,398 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+img { 
+    max-width: 100% 
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font-size: 14px;
+    line-height: 1.29;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background-color: #ee3643;
+}
+
+.button:hover{
+    background-color: #ca2c37;
+}
+
+.button:active {
+    background-color: #ba2732;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+/* Хэдер */
+
+.main-header {
+    background-color: #f4f7f9;
+}
+
+.logo {
+    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+    background-color: #ee3643;
+}
+
+.main-header ul {
+    list-style: none;
+}
+
+.menu-top {
+    background-color: #293449;
+}
+ 
+.search-form input {
+    background-color: #293449;
+}
+
+.search-form label {
+    display: none;
+}
+
+.menu-top a {
+    font-size: 17px;
+    line-height: 1.06;
+    text-align: left;
+    color: #ffffff; 
+}
+
+.menu-top a:hover {
+    background-color: #212a3a;
+}
+
+.menu-top a:active {
+    color: rgba(255, 255, 255, 0.6);
+
+    background-color: #161d29;
+}
+
+.menu-top a:last-child {
+    background-color: #63a63e;
+}
+
+.menu-top a:last-child:hover {
+    background-color: #5fbb2d;
+}
+
+.menu-top a:last-child:active {
+    background-color: #518534;
+}
+
+.main-title {
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.44;
+    text-align: left;
+    color: #ee3643;
+}
+
+.phone {
+    font-size: 21px;
+    line-height: 1;
+    text-align: left;
+    color: #ee3643;
+
+    border: solid 3px #ffffff;
+}
+
+.header-address {
+    font-size: 14px;
+    line-height: 1.71;
+    text-align: center;
+    color: #32425c;
+}
+
+.authorization a {
+  font-size: 21px;
+  line-height: 1;
+  text-align: left;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.authorization a:hover {
+  color: #ee3643;
+
+  background-color: #f1f5f7;
+}
+
+.authorization a:active {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #f1f5f7;
+}
+
+.main-menu {
+  box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;
+}
+
+.main-menu a {
+  font-size: 17px;
+  line-height: 1;
+  text-align: left;
+  color: #ffffff; 
+}
+
+.main-menu a:hover {
+    background-color: #293449;
+}
+
+.main-menu a:active {
+    color: rgba(255, 255, 255, 0.5);
+
+    background-color: #1d2739;
+}
+
+/* Промо блок */
+
+.promo-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: left;
+    color: #ffffff;
+}
+
+.promo-item a {
+    font-size: 14px;
+    line-height: 1.29;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff; 
+
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.materials {
+    background-color: #ffbf47;
+}
+
+.tools {
+    background-color: #3bbce3;
+}
+
+.technics {
+    background-color: #dc91d8;
+}
+
+.discounts {
+    background-color: #8ed78f;
+}
+
+.delivery {
+    background-color: #ffc047;
+}
+
+.slide {
+    background-color: #8a7a6d;
+}
+
+.slide h3 {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: #ffffff;
+}
+
+.slide p {
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: left;
+    color: #ffffff;
+}
+
+.popular-items-header,
+.popular-brands-header {
+    background-color: #f9f5f0;
+}
+
+.popular-items-header h2,
+.popular-brands-header h2 {
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: left;
+    color: #32425c; 
+}
+
+.catalog-item {
+    font-family: 'PTSans';
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+
+    border: solid 1px #eaeaea;
+    background-color: #ffffff;
+}
+
+.catalog-item:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.catalog-item s {
+    font-size: 17px;
+    line-height: 1.06;
+    color: #a9a9a9;
+}
+
+.catalog-item span {
+    font-size: 17px;
+    line-height: 1.06;
+    color: #ffffff;
+    background-color: #ee3643;
+}
+
+.catalog-item img {
+    background-color: #065573;
+}
+
+.active {
+    font-family: Cuprum;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: #ffffff;
+}
+
+.buy {
+    color: #ffffff;
+
+    box-shadow: inset 0px -3px 0 0 #367315;
+    background-color: #63a63e;
+}
+
+.buy:hover {
+    background-color: #5fbb2d;
+}
+
+.buy:active {
+    background-color: #518534;
+    box-shadow: none;
+}
+
+.to-bookmark {
+    color: #32425c;
+    
+    border: solid 3px #63a63e;
+}
+
+.to-bookmark:hover {
+    border: solid 3px #32425c;
+}
+
+.to-bookmark:active {
+    opacity: 0.3;
+}
+
+.popular-brands ul {
+    list-style: none;
+}
+.brand-list li {
+    border: solid 1px #eaeaea;
+    background-color: #ffffff;
+}
+
+.brand-list li:hover {
+    box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.brand-list li:active {
+    opacity: 0.3;
+    box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.services {
+    background-color: #f4f7f9;
+}
+
+.services h2 {
+    font-size: 30px;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.service-controls label {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.43;
+    text-align: left;
+    color: #ffffff;
+
+    box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+    background-color: #32425c;
+}
+
+.services h3 {
+    font-size: 36px;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+    color: #32425c;
+}
+
+.services p {
+    font-family: PTSans;
+    font-size: 13px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.85;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
