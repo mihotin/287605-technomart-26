@@ -20,7 +20,7 @@
           <button type="submit">Поиск</button>
         </form>
         <a class="bookmark" href="#">Закладки:<span>0</span></a>
-        <a class="basket" href="#">Корзина:<span>10</span></a>
+        <a class="basket basket-full" href="#">Корзина:<span>10</span></a>
         <a class="order" href="#">Оформить заказ</a>
       </div>
       <div class="menu-middle">
@@ -32,8 +32,10 @@
           <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div> 
         <div class="account"> <!-- 3.4. В блоке авторизованного посетителя имя и иконка пользователя являются ссылкой на профайл.-->
-          <a class="account-name account-icon" href="#" title="Войти в профиль">Равшан Джамшутович</a>
-          <a class="acount-exit" href="#" title="Выйти из профиля"></a>
+          <div class="account-back">
+            <a class="account-name account-icon" href="#" title="Войти в профиль">Равшан Джамшутович</a>
+            <a class="acount-exit" href="#" title="Выйти из профиля"></a>
+          </div>
           <ul class="account-menu">
             <li><a href="#">Мои заказы</a></li>
             <li><a href="#">Личный кабинет</a></li>
@@ -57,7 +59,7 @@
        <li class="to-index"><a href="index.html"></a></li>
        <li><a href="catalog.html">Каталог</a></li>
        <li><a href="#">Инструмент</a></li>
-       <li class="current">Перфораторы</li>
+       <li class="current"><a>Перфораторы</a></li>
      </ul>
      <h1>Перфораторы</h1>
      <section class="filters"> <!-- Секция формы фильтра товаров -->
@@ -87,23 +89,23 @@
             <legend>Производители</legend>
             <ul class="filter-brands-list">
               <li>
-                <input class="visually-hidden" type="checkbox" name="bosch" id="filter-bosch" checked>
+                <input type="checkbox" name="bosch" id="filter-bosch" checked>
                 <label for="filter-bosch">Bosch</label>
               </li>
               <li>
-                <input class="visually-hidden" type="checkbox" name="interskol" id="filter-interskol">
+                <input type="checkbox" name="interskol" id="filter-interskol">
                 <label for="filter-interskol">Интерскол</label>
               </li>
               <li>
-                <input class="visually-hidden" type="checkbox" name="makita" id="filter-makita" checked>
+                <input type="checkbox" name="makita" id="filter-makita" checked>
                 <label for="filter-makita">Makita</label>
               </li>
               <li>
-                <input class="visually-hidden" type="checkbox" name="dewalt" id="filter-dewalt">
+                <input type="checkbox" name="dewalt" id="filter-dewalt">
                 <label for="filter-dewalt">Dewalt</label>
               </li>
               <li>
-                <input class="visually-hidden" type="checkbox" name="hitachi" id="filter-hitachi">
+                <input type="checkbox" name="hitachi" id="filter-hitachi">
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
@@ -112,11 +114,11 @@
             <legend>Питание:</legend>
             <ul class="filter-power-list">      
               <li>
-                <input class="visually-hidden" type="radio" name="power-group" id="filter-battery" value="battery" checked>
+                <input type="radio" name="power-group" id="filter-battery" value="battery" checked>
                 <label for="filter-battery">Аккумуляторные</label>
               </li>
               <li>
-                <input class="visually-hidden" type="radio" name="power-group" id="filter-rosette" value="rosette">
+                <input type="radio" name="power-group" id="filter-rosette" value="rosette">
                 <label for="filter-rosette">Hitachi</label>
               </li> 
             </ul>
@@ -129,13 +131,13 @@
        <div class="sorting-container"> <!-- Блок сортировки -->
         <p>Сортировка:</p>
         <ul class="sorting-list">
-          <li><a href="#">По цене</a></li>
+          <li><a class="list-active" href="#">По цене</a></li>
           <li><a href="#">По типу</a></li>
           <li><a href="#">По функционалу</a></li>
         </ul>
         <ul class="sorting-list-arrows">
-          <li><a href="#" title="По возрастанию"></a>По возрастанию</li>
-          <li><a href="#" title="По убыванию"></a>По убыванию</li>
+          <li><a class="arrow-active" href="#" title="По возрастанию">По возрастанию</a></li>
+          <li><a href="#" title="По убыванию">По убыванию</a></li>
         </ul>
        </div>
        <div class="catalog"> <!-- Каталог -->
@@ -227,10 +229,10 @@
           </div>
          </article>
          <ul class="pagination-list"> <!-- Список нумерации -->
-           <li><a class="pagination-item current"></a>1</li>
-           <li><a class="pagination-item" href="#"></a>2</li>
-           <li><a class="pagination-item" href="#"></a>3</li>
-           <li><a class="pagination-item next" href="#"></a>Следующая</li>
+           <li><a class="pagination-item current">1</a></li>
+           <li><a class="pagination-item" href="#">2</a></li>
+           <li><a class="pagination-item" href="#">3</a></li>
+           <li><a class="pagination-item next" href="#">Следующая</a></li>
          </ul>
        </div>
      </section>
