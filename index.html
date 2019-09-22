@@ -10,30 +10,34 @@
   <body>
     <header class="main-header"> <!-- Шапка сайта -->
       <div class="menu-top">
-        <div class="logo">
-          <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип компании Техномарт">
+        <div class="container">
+          <div class="logo">
+           <img src="img/logo-technomart.svg" width="109" height="19" alt="Логотип компании Техномарт">
+          </div>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
+            <input type="search" id="search-field" name="search" placeholder="Поиск:">
+            <label class="visually-hidden" for="search-field">Поле поиска</label>
+            <button class="search-btn" type="submit">Поиск</button>
+          </form>
+          <a class="bookmark" href="#">Закладки:<span>0</span></a>
+          <a class="basket" href="#">Корзина:<span>0</span></a>
+          <a class="order" href="#">Оформить заказ</a>
         </div>
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="GET">
-          <input type="search" id="search-field" name="search" placeholder="Поиск:">
-          <label class="visually-hidden" for="search-field">Поле поиска</label>
-          <button class="search-btn" type="submit">Поиск</button>
-        </form>
-        <a class="bookmark" href="#">Закладки:<span>0</span></a>
-        <a class="basket" href="#">Корзина:<span>0</span></a>
-        <a class="order" href="#">Оформить заказ</a>
       </div>
       <div class="menu-middle">
-        <p class="main-title">Интернет-магазин
-            строительных материалов
-            и инструментов для ремонта</p>
-        <div class="contacts">
-          <a class="phone" href="tel:+7812550555" title="Позвонить сейчас" aria-label="Позвонить в магазин +7 (812) 555-05-55">+7 (812) 555-05-55</a>
-          <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </div>
-        <ul class="authorization">
-          <li><a class="icon-login" href="#">Войти</a></li>
-          <li><a href="#">Регистрация</a></li>
-        </ul>
+        <div class="container">
+          <p class="main-title">Интернет-магазин
+              строительных материалов
+              и инструментов для ремонта</p>
+          <div class="contacts">
+            <a class="phone" href="tel:+7812550555" title="Позвонить сейчас" aria-label="Позвонить в магазин +7 (812) 555-05-55">+7 (812) 555-05-55</a>
+            <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          </div>
+          <ul class="authorization">
+            <li><a class="icon-login" href="#">Войти</a></li>
+            <li><a href="#">Регистрация</a></li>
+          </ul>
+      </div>
       </div>
       <nav class="main-menu">
         <ul class="main-menu-list">
@@ -76,7 +80,7 @@
                    <img src="img/slider-image-dril.jpg" width="620" height="266" alt="Слайд дрели">
                    <a class="button" href="catalog.html">Открыть каталог</a>
                  </div>
-                 <div class="slide">
+                 <div class="slide visually-hidden">
                    <h3>Перфораторы</h3>
                    <p>Настоящие мужские игрушки</p>
                    <img src="img/slide-image-perf.jpg" width="620" height="266" alt="Слайд перфораторы">
