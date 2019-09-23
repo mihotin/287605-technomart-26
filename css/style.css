@@ -134,23 +134,34 @@ a {
     background-color: #518534;
 }
 
-.logo,
-.footer-logo {
-    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+.logo a,
+.footer-logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 0 0#b52933;
     background-color: #ee3643;
+}
+
+.logo a {
+    width: 220px;
+    height: 42px;
+}
+
+.footer-logo a {
+    width: 220px;
+    height: 63px; 
 }
 
 .logo a:hover,
 .logo a:focus,
 .footer-logo a:hover,
 .footer-logo a:focus {
-    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
     background-color: #ca2c37;
 }
 
 .logo a:active,
 .footer-logo a:active {
-    box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
     background-color: #ba2732;
 }
 
@@ -159,6 +170,9 @@ a {
     font-style: italic;
     line-height: 1.44;
     color: #ee3643;
+
+    width: 196px;
+    height: 60px;
 }
 
 .phone {
@@ -232,7 +246,8 @@ a {
 }
 
 .main-menu-list {
-    
+    box-shadow: inset 0px -5px 0 0 #293449;
+    background-color: #32425c;
 }
 
 .main-menu-list a {
@@ -470,13 +485,12 @@ a {
     font-weight: bold;
     line-height: 1.25;
     color: #ffffff;
+
+    margin: 0;
+    padding: 0;
 }
 
 .promo-item a {
-    width: 135px;
-    height: 38px;
-    padding-top: 12px;
-
     font-size: 14px;
     line-height: 1.29;
     text-align: center;
@@ -484,6 +498,9 @@ a {
     color: #ffffff; 
 
     background-color: rgba(0, 0, 0, 0.1);
+
+    width: 135px;
+    height: 38px;
 }
 
 .promo-item a:hover,
@@ -515,7 +532,10 @@ a {
     background-color: #ffc047;
 }
 
-.slide {
+.slider {
+    width: 620px;
+    height: 266px;
+
     background-color: #8a7a6d;
 }
 
@@ -540,10 +560,21 @@ a {
 .popular-items-header h2,
 .popular-brands-header h2 {
     font-size: 30px;
+    font-weight: normal;
     line-height: 1;
+    text-align: left;
+    color: #32425c;
     text-transform: uppercase;
-    color: #32425c; 
 }
+
+.popular-items-header a,
+.popular-brands-header a {
+    width: 253px;
+    height: 38px;
+
+    margin-right: 24px;
+}
+
 
 .catalog-item {
     font-family: "PTSans", sans-serif;
@@ -630,7 +661,10 @@ a {
 
 .brand-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
 .brand-list a {
     border: solid 1px #eaeaea;
     background-color: #ffffff;
@@ -654,10 +688,16 @@ a {
 .company-info h2,
 .contacts h2 {
     font-size: 30px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
     line-height: 1;
+    letter-spacing: normal;
     text-align: left;
-    text-transform: uppercase;
     color: #000000;
+    text-transform: uppercase;
+
+    margin-top: 0;
 }
 
 .service-controls input[type="radio"] {
@@ -670,6 +710,9 @@ a {
     line-height: 1.43;
     text-align: left;
     color: #ffffff;
+
+    width: 240px;
+    height: 61px;
 
     box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
     background-color: #32425c;
@@ -691,9 +734,14 @@ a {
 
 .services h3 {
     font-size: 36px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
     line-height: 1;
-    text-transform: uppercase;
+    letter-spacing: normal;
+    text-align: left;
     color: #32425c;
+    text-transform: uppercase
 }
 
 .services p,
@@ -708,6 +756,10 @@ a {
     letter-spacing: normal;
     text-align: left;
     color: #000000;
+}
+
+.service-slide {
+    padding-left: 80px;
 }
 
 .company-info-list {
@@ -929,13 +981,13 @@ a {
 
 
 /* Стили сетки */
-/* Хедер */
+/* Стили сетки Хедер */
 
 body {
     display: flex;
     flex-direction: column;
 
-    width: 1200px;
+    width: auto;
     min-height: 3151px;
     margin: 0 auto;
 }
@@ -972,11 +1024,14 @@ body {
 
 .menu-middle .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     width: 940px;
     min-height: 158px;
+
     margin: 0 auto;
+    padding-left: 52px;
 }
 
 .authorization {
@@ -1002,13 +1057,14 @@ body {
     margin-bottom: 60px;
 }
 
-/* Стили main */
+/* Стили сетки main */
 
 .main-content {
     display: flex;
     flex-direction: column;
 }
 
+/* Стили сетки Промо блока */
 .promo-block {
     display: flex;
     justify-content: space-between;
@@ -1018,28 +1074,229 @@ body {
     min-height: 409px;
 
     margin: 0 auto;
+    margin-bottom: 53px;
 }
-
 
 .promo-item { 
     display: flex;
     flex-direction: column;
+    justify-content: space-around; /* Временно  */
     width: 300px;
     height: 123px;
+    padding-left: 23px; /* Временно  */
 
-   /*margin-right: 20px;
-   margin-bottom: 20px;*/
+    margin-bottom: 20px;
 
-}
-
-.slider {
-    display: flex;
-    flex-direction: column;
-    width: 620px;
-    height: 266px;
 }
 
 .promo-block:last-child {
-    margin-left: auto;
-    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* Стили тсетки Каталога и Брендов */
+.popular-items {
+    display: flex;
+    flex-direction: column;
+
+    width: 940px;
+    min-height: 369px;
+
+    margin: 0 auto;
+    margin-bottom: 21px;
+}
+
+.popular-items .popular {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+
+    width: 220px;
+    height: 318px;
+}
+
+.catalog-item img {
+    order: -1;
+}
+
+.popular-brands {
+    display: flex;
+    flex-direction: column;
+
+    width: 940px;
+    min-height: 419px;
+
+    margin: 0 auto;
+    margin-bottom: 85px;
+}
+
+.brand-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    width: 940px;
+    min-height: 310px;
+}
+
+.brand-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 220px;
+    height: 145px;
+}
+
+.popular-items-header,
+.popular-brands-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 940px;
+    min-height: 89px; 
+
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.popular-items-header {
+    margin-bottom: 21px;
+}
+
+.popular-brands-header {
+    margin-bottom: 20px;
+}
+
+/* Стили сетки Сервисы */
+
+.services {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 522px;
+}
+
+.services-header {
+    width: 940px;
+    min-height: 192px;
+
+    margin: 0 auto;
+    padding-top: 68px;
+}
+
+.slider-services {
+    display: flex;
+    width: 940px;
+    min-height: 279px;
+
+    margin: 0 auto;
+    margin-bottom: 51px;
+}
+
+.service-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 279px;
+}
+
+/* Стили сетки О компании и контакты */
+
+.company-description {
+    display: flex;
+
+    width: 940px;
+    min-height: 450px;
+
+    margin: 0 auto;
+    padding-top: 82px;
+
+}
+
+
+
+
+
+/* Стили сетки Футера */
+
+.main-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 940px;
+    min-height: 63px;
+    
+    margin: 0 auto;
+    margin-bottom: 37px;
+}
+
+.footer-navigation {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.footer-navigation li {
+    margin-right: 60px;
+}
+.footer-navigation li:last-child {
+    margin-right: 0;
+}
+
+.middle-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 940px;
+    min-height: 93px;
+    
+    margin: 0 auto;
+}
+
+.middle-row p {
+    padding: 0;
+    margin: 0;
+}
+
+.middle-navigation {
+    display: flex;
+    margin-top: 0;
+}
+
+.middle-navigation li {
+    margin-right: 60px;
+}
+
+.middle-navigation li:last-child {
+    margin-right: 0;
+}
+
+.bottom-row-background {
+    min-height: 105px;
+
+    background-color: #293449;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 940px;
+    min-height: 105px;
+    
+    margin: 0 auto;
 }
