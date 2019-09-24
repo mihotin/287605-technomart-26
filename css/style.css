@@ -12,7 +12,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -100,18 +100,23 @@ a {
   display: none;
 }
 
-.menu-top a {
+.menu-top .bookmark,
+.menu-top .basket,
+.menu-top .order {
   font-size: 17px;
   line-height: 1.06;
   color: #ffffff;
 }
 
-.menu-top a:hover,
-.menu-top a:focus {
+.menu-top .bookmark:hover,
+.menu-top .basket:hover,
+.menu-top .bookmark:focus,
+.menu-top .basket:focus {
   background-color: #212a3a;
 }
 
-.menu-top a:active {
+.menu-top .bookmark:active,
+.menu-top .basket:active {
   color: rgba(255, 255, 255, 0.6);
 
   background-color: #161d29;
@@ -162,15 +167,15 @@ a {
   height: 63px;
 }
 
-.logo a:hover,
-.logo a:focus,
-.footer-logo a:hover,
-.footer-logo a:focus {
+.logo:not(.index) a:hover,
+.logo:not(.index) a:focus,
+.footer-logo:not(.index) a:hover,
+.footer-logo:not(.index) a:focus {
   background-color: #ca2c37;
 }
 
-.logo a:active,
-.footer-logo a:active {
+.logo:not(.index) a:active,
+.footer-logo:not(.index) a:active {
   background-color: #ba2732;
 }
 
@@ -287,7 +292,7 @@ a {
 }
 
 .breadcrumbs a {
-  font-family: "PTSans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-style: normal;
@@ -316,7 +321,7 @@ a {
 .filters,
 .sorting-container,
 .pagination-list {
-  font-family: "PTSans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
@@ -480,7 +485,7 @@ a {
 }
 
 .definition p {
-  font-family: "PTSans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-style: normal;
@@ -550,6 +555,7 @@ a {
   height: 266px;
 
   background-color: #8a7a6d;
+  background-image: url(../img/slider-image-dril.jpg);
 }
 
 .slide h3 {
@@ -590,7 +596,7 @@ a {
 
 
 .catalog-item {
-  font-family: "PTSans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   font-weight: bold;
   font-style: normal;
@@ -627,7 +633,7 @@ a {
 }
 
 .active {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -699,7 +705,7 @@ a {
 
 .services h2,
 .company-info h2,
-.contacts h2 {
+.company-contacts h2 {
   font-size: 30px;
   font-weight: normal;
   font-style: normal;
@@ -759,8 +765,8 @@ a {
 
 .services p,
 .company-info p,
-.contacts p {
-  font-family: "PTSans", sans-serif;
+.company-contacts p {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-style: normal;
@@ -786,7 +792,7 @@ a {
   color: #000000;
 }
 
-.contacts img {
+.company-contacts img {
   background-color: #efeae4;
 }
 
@@ -958,7 +964,7 @@ a {
 .modal-form-back input[type="text"],
 .modal-form-back input[type="email"],
 .modal-form-back textarea {
-  font-family: "PTSans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-style: normal;
@@ -996,8 +1002,10 @@ a {
 /* ----- Стили сетки Хедер ----- */
 
 .container {
-  width: 940px;
+  width: 960px;
+
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .main-header {
@@ -1016,9 +1024,7 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  width: 940px;
   min-height: 42px;
-  margin: 0 auto;
 }
 
 .search-form {
@@ -1034,10 +1040,8 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  width: 940px;
   min-height: 158px;
 
-  margin: 0 auto;
   padding-left: 52px;
 }
 
@@ -1045,17 +1049,12 @@ a {
   display: flex;
 }
 
-.main-menu {
-  min-width: 940px;
-  margin: 0 auto;
-}
-
 .main-menu-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
 
-  width: 940px;
+  width: 100%;
   min-height: 60px;
 
   margin: 0;
@@ -1077,10 +1076,8 @@ a {
   justify-content: space-between;
   align-content: space-between;
 
-  width: 940px;
   min-height: 468px;
 
-  margin: 0 auto;
   margin-bottom: 53px;
   padding-top: 59px;
 }
@@ -1110,10 +1107,7 @@ a {
   display: flex;
   flex-direction: column;
 
-  width: 940px;
   min-height: 448px;
-
-  margin: 0 auto;
 }
 
 .popular-items .catalog-popular {
@@ -1151,10 +1145,8 @@ a {
   display: flex;
   flex-direction: column;
 
-  width: 940px;
   min-height: 419px;
 
-  margin: 0 auto;
   margin-bottom: 85px;
 }
 
@@ -1164,7 +1156,7 @@ a {
   flex-wrap: wrap;
   align-content: space-between;
 
-  width: 940px;
+  width: 100%;
   min-height: 330px;
 
   padding-top: 20px;
@@ -1185,10 +1177,9 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  width: 940px;
   min-height: 89px;
 
-  margin: 0 auto;
+  margin: 0;
   padding-left: 30px;
 }
 
@@ -1202,19 +1193,15 @@ a {
 }
 
 .services-header {
-  width: 940px;
   min-height: 192px;
 
-  margin: 0 auto;
   padding-top: 68px;
 }
 
 .slider-services {
   display: flex;
-  width: 940px;
   min-height: 279px;
 
-  margin: 0 auto;
   margin-bottom: 51px;
 }
 
@@ -1231,11 +1218,20 @@ a {
 .company-description {
   display: flex;
 
-  width: 940px;
   min-height: 450px;
 
-  margin: 0 auto;
+  margin-bottom: 86px;
   padding-top: 82px;
+}
+
+.company-info {
+  min-width: 640px;
+  min-height: 368px;
+}
+
+.company-contacts {
+  width: 100%;
+  min-height: 368px;
 }
 
 /* Стили сетки Футера */
@@ -1250,10 +1246,8 @@ a {
   justify-content: space-between;
   align-items: flex-end;
 
-  width: 940px;
   min-height: 63px;
 
-  margin: 0 auto;
   margin-bottom: 37px;
 }
 
@@ -1275,10 +1269,7 @@ a {
   justify-content: space-between;
   align-items: flex-start;
 
-  width: 940px;
   min-height: 93px;
-
-  margin: 0 auto;
 }
 
 .middle-row p {
@@ -1310,10 +1301,7 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  width: 940px;
   min-height: 105px;
-
-  margin: 0 auto;
 }
 
 /* ----- Стили сетки catalog.html ------*/
@@ -1329,6 +1317,7 @@ a {
 .main-catalog-title {
   display: flex;
   align-items: center;
+
   min-height: 89px;
 
   margin: 0;
@@ -1345,7 +1334,7 @@ a {
   display: flex;
   flex-direction: column;
 
-  width: 220px;
+  min-width: 220px;
   min-height: 786px;
 
   margin-right: 20px;
@@ -1355,7 +1344,7 @@ a {
   display: flex;
   flex-direction: column;
 
-  width: 700px;
+  width: 100%;
 }
 
 .sorting-container {
@@ -1390,11 +1379,13 @@ a {
   display: flex;
   align-items: center;
 
+  width: 100%;
   min-height: 38px;
 
   margin: 0;
   margin-bottom: 60px;
   padding-left: 0;
+  padding-top: 32px;
 }
 
 .definition {
