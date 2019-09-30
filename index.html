@@ -236,48 +236,6 @@
         <a class="button " href="#">Заблудились? Напишите нам!</a>
       </section>
     </div>
-
-    <section class="modal modal-basket">
-      <!-- Модальное окно добавления товара в корзину -->
-      <h2 class="modal-basket-header modal-check">Товар добавлен в корзину</h2>
-      <ul class="modal-list">
-        <li><a class="make-order-btn" href="#">Оформить заказ</a></li>
-        <li><a class="white-btn" href="#">Продолжить покупки</a></li>
-      </ul>
-      <button class="modal-close" type="button">Закрыть окно</button>
-    </section>
-    <section class="modal modal-form-back">
-      <!-- Модальное окно Формы обратной связи -->
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form class="form-back" action="https://echo.htmlacademy.ru" method="post">
-        <div class="user-top-row">
-          <div>
-            <label for="user-name">Ваше имя:</label>
-            <input type="text" name="user" id="user-name" placeholder="Имя Фамилия">
-          </div>
-          <div>
-            <label for="user-email">Ваш e-mail:</label>
-            <input type="email" name="e-mail" id="user-email" placeholder="email@example.com">
-          </div>
-        </div>
-        <div class="user-middle-row">
-          <label for="user-text">Текст письма:</label>
-          <textarea name="email-text" id="user-text" cols="30" rows="5">В свободной форме</textarea>
-        </div>
-        <div class="user-bottom-row">
-          <button class="button" type="submit">Отправить</button>
-        </div>
-      </form>
-      <button class="modal-close" type="button">Закрыть окно</button>
-    </section>
-    <section class="modal modal-map">
-      <!-- Модальное окно карты -->
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <div>
-        <img src="img/map.jpg" alt="Офис компании по адресу: Санкт-Петербург, Большая Конюшенная ул., 19/8">
-      </div>
-      <button class="modal-close" type="button">Закрыть окно</button>
-    </section>
   </main>
 
   <footer class="main-footer">
@@ -324,6 +282,47 @@
       </div>
     </div>
   </footer>
+  <section class="modal modal-basket">
+    <!-- Модальное окно добавления товара в корзину -->
+    <h2 class="modal-basket-header modal-check">Товар добавлен в корзину</h2>
+    <ul class="modal-list">
+      <li><a class="make-order-btn" href="#">Оформить заказ</a></li>
+      <li><a class="white-btn" href="#">Продолжить покупки</a></li>
+    </ul>
+    <button class="modal-close" type="button">Закрыть окно</button>
+  </section>
+  <section class="modal modal-form-back">
+    <!-- Модальное окно Формы обратной связи -->
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <form class="form-back" action="https://echo.htmlacademy.ru" method="post">
+      <div class="user-top-row">
+        <div class="user-name">
+          <label for="user-name">Ваше имя:</label>
+          <input type="text" name="user" id="user-name" placeholder="Имя Фамилия">
+        </div>
+        <div class="user-email">
+          <label for="user-email">Ваш e-mail:</label>
+          <input type="email" name="e-mail" id="user-email" placeholder="email@example.com">
+        </div>
+      </div>
+      <div class="user-middle-row">
+        <label for="user-text">Текст письма:</label>
+        <textarea name="email-text" id="user-text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
+      </div>
+      <div class="user-bottom-row">
+        <button class="button" type="submit">Отправить</button>
+      </div>
+    </form>
+    <button class="modal-close" type="button">Закрыть окно</button>
+  </section>
+  <section class="modal modal-map">
+    <!-- Модальное окно карты -->
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <div>
+      <img src="img/map.jpg" alt="Офис компании по адресу: Санкт-Петербург, Большая Конюшенная ул., 19/8">
+    </div>
+    <button class="modal-close" type="button">Закрыть окно</button>
+  </section>
 </body>
 
 </html>
