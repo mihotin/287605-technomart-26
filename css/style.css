@@ -130,6 +130,19 @@ input[type="search"]:focus + .search-btn {
   fill: #ee3643;
 }
 
+.search-btn:hover {
+  background-color: #212a3a;
+  fill: #ffffff;
+}
+
+.search-btn:focus {
+  background-color: #ffffff;
+  
+  outline: none;
+
+  fill: #ee3643;
+}
+
 .order-menu {
   display: flex;
   justify-content: flex-start;
