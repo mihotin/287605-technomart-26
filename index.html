@@ -23,7 +23,7 @@
           <input type="search" id="search-field" name="search" placeholder="Поиск:">
           <button class="search-btn" type="submit" aria-label="Поиск"><svg xmlns="http://www.w3.org/2000/svg" width="48"
               height="42" viewBox="-17 -12 48 42">
-              <path 
+              <path
                 d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
             </svg></button>
         </form>
@@ -118,40 +118,48 @@
       <div class="catalog-popular">
         <!--Добавление и удаление элементов без выпадения -->
         <article class="catalog-item">
-          <h3>Перфоратор BOSCH BFG 9000</h3>
-          <s>32500 Р.</s>
-          <span>25500 Р.</span>
-          <img src="img/bosh-bfg-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+          <a class="focus" href="#">
+            <h3>Перфоратор BOSCH BFG 9000</h3>
+            <s>32500 Р.</s>
+            <span>25500 Р.</span>
+            <img src="img/bosh-bfg-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+          </a>
           <div class="active">
             <a class="buy" href="#">Купить</a>
             <a class="to-bookmark" href="#">В закладки</a>
           </div>
         </article>
         <article class="catalog-item">
-          <h3>Перфоратор BOSCH BFG 3000</h3>
-          <s>22500 Р.</s>
-          <span>15500 Р.</span>
-          <img src="img/bosh-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+          <a class="focus" href="#">
+            <h3>Перфоратор BOSCH BFG 3000</h3>
+            <s>22500 Р.</s>
+            <span>15500 Р.</span>
+            <img src="img/bosh-bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+          </a>
           <div class="active">
             <a class="buy" href="#">Купить</a>
             <a class="to-bookmark" href="#">В закладки</a>
           </div>
         </article>
         <article class="catalog-item">
-          <h3>Перфоратор BOSCH BFG 6000</h3>
-          <s>30500 Р.</s>
-          <span>25500 Р.</span>
-          <img src="img/bosh-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+          <a class="focus" href="#">
+            <h3>Перфоратор BOSCH BFG 6000</h3>
+            <s>30500 Р.</s>
+            <span>25500 Р.</span>
+            <img src="img/bosh-bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+          </a>
           <div class="active">
             <a class="buy" href="#">Купить</a>
             <a class="to-bookmark" href="#">В закладки</a>
           </div>
         </article>
         <article class="catalog-item new">
-          <h3>Перфоратор BOSCH BFG 2000</h3>
-          <s></s>
-          <span>12500 Р.</span>
-          <img src="img/bosh-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+          <a class="focus" href="#">
+            <h3>Перфоратор BOSCH BFG 2000</h3>
+            <s></s>
+            <span>12500 Р.</span>
+            <img src="img/bosh-bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+          </a>
           <div class="active">
             <a class="buy" href="#">Купить</a>
             <a class="to-bookmark" href="#">В закладки</a>
@@ -238,7 +246,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,
           заехав в наш офис:</p>
-        <a class="map" href="#"><img src="img/map-small.jpg" width="300" height="158" 
+        <a class="map" href="#"><img src="img/map-small.jpg" width="300" height="158"
             alt="Офис компании по адресу: Санкт-Петербург, Большая Конюшенная ул., 19/8"></a>
         <a class="button button-contacts" href="#">Заблудились? Напишите нам!</a>
       </section>
@@ -326,7 +334,8 @@
     <!-- Модальное окно карты -->
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <div>
-      <img src="img/map.jpg" width="940" height="446" alt="Офис компании по адресу: Санкт-Петербург, Большая Конюшенная ул., 19/8">
+      <img src="img/map.jpg" width="940" height="446"
+        alt="Офис компании по адресу: Санкт-Петербург, Большая Конюшенная ул., 19/8">
     </div>
     <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
   </section>
