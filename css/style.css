@@ -1412,20 +1412,14 @@ input[type="search"]:focus + .search-btn {
   position: relative;
 
   background-color: #ffffff;
-  border: solid 1px #eaeaea;
  
   cursor: pointer;
 }
 
+.focus:hover,
 .focus:focus {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
-  border: none;
 }
-
-.catalog-item:hover {
-  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
-}
-
 
 .focus h3 {
   font-size: 18px;
@@ -1495,8 +1489,8 @@ input[type="search"]:focus + .search-btn {
 
   position: absolute;
 
-  top: -1px;
-  right: -1px;
+  top: 0;
+  right: 0;
 
   width: 60px;
   height: 59px;
@@ -1636,13 +1630,6 @@ input[type="search"]:focus + .search-btn {
 .catalog-item:hover .active {
   display: flex;
 }
-
-.catalog-item:hover .focus {
-  box-shadow: none;
-}
-
-
-
 
 .brand-list {
   list-style: none;
@@ -2499,6 +2486,7 @@ input[type="search"]:focus + .search-btn {
   height: 100%;
   
   background-color: #ffffff;
+  border: solid 1px #eaeaea;
 }
 
 .catalog-popular .catalog-item:nth-child(4n) {
