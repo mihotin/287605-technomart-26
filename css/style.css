@@ -1418,11 +1418,13 @@ input[type="search"]:focus + .search-btn {
   cursor: pointer;
 }
 
-
-.focus:hover,
 .focus:focus {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   border: none;
+}
+
+.catalog-item:hover {
+  box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 
@@ -1634,6 +1636,10 @@ input[type="search"]:focus + .search-btn {
 
 .catalog-item:hover .active {
   display: flex;
+}
+
+.catalog-item:hover .focus {
+  box-shadow: none;
 }
 
 
