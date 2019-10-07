@@ -1549,10 +1549,6 @@ input[type="search"]:focus + .search-btn {
   background-color: #5fbb2d;
 }
 
-.active .buy:focus {
-  display: flex;
-}
-
 .buy:active {
   background-color: #518534;
   box-shadow: none;
