@@ -2010,7 +2010,12 @@ input[type="search"]:focus + .search-btn {
 }
 
 .modal-basket {
-  position: relative;
+  position: fixed;
+
+  top: 411px;
+  left: 50%;
+ 
+  margin-left: -310px;
 
   display: flex;
   flex-direction: column;
@@ -2029,6 +2034,8 @@ input[type="search"]:focus + .search-btn {
   background-image: url(../img/modal-check.svg);
   background-repeat: no-repeat;
   background-position: 81px 55px;
+
+  z-index: 25;
 }
 
 .modal-basket h2 {
