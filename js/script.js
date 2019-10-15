@@ -40,14 +40,14 @@ document.addEventListener('keydown', function (evt) {
 var toBookmarks = document.querySelectorAll('.to-bookmark');
 var bookmark = document.querySelector('.bookmark');
 var numbersProductBookmark = bookmark.querySelector('span');
-var sum = 0;
+var resulte = 0;
 
-for (var i = 0; i < toBookmarks.length; i++) {
-  var toBookmark = toBookmarks[i];
+for (var step = 0; step < toBookmarks.length; step++) {
+  var toBookmark = toBookmarks[step];
   toBookmark.addEventListener("click", function (evt) {
     evt.preventDefault();
-    sum += 1;
-    numbersProductBookmark.textContent = sum;
+    resulte += 1;
+    numbersProductBookmark.textContent = resulte;
   });
 }
 
