@@ -2039,10 +2039,6 @@ input[type="search"]:focus + .search-btn {
   z-index: 25;
 }
 
-.modal-show {
-  display: flex;
-}
-
 .modal-basket h2 {
   font-size: 30px;
   line-height: 1;
@@ -2137,11 +2133,6 @@ input[type="search"]:focus + .search-btn {
 
   z-index: 25;
 }
-
-.modal-show-form {
-  display: block;
-}
-
 
 .form-back {
   display: flex;
@@ -2263,18 +2254,39 @@ input[type="search"]:focus + .search-btn {
 }
 
 .modal-map {
-  position: relative;
+  position: fixed;
 
-  display: flex;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+
+  margin-top: -210px;
+  margin-left: -470px;
+
   justify-content: center;
-  align-items: center;
 
   width: 940px;
-  min-height: 440px;
+  height: auto;
 
   background-color: #efeae4;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+
+  z-index: 25;
 }
+
+.modal-map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 24;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 25;
+}
+
 
 .modal-map .modal-close,
 .modal-basket .modal-close,
@@ -2297,7 +2309,11 @@ input[type="search"]:focus + .search-btn {
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  z-index: 21;
+  z-index: 26;
+}
+
+.modal-show {
+  display: flex;
 }
 
 .container {

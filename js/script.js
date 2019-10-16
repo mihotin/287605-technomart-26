@@ -29,9 +29,11 @@ nextSale.addEventListener("click", function (evt) {
   modalBasket.classList.remove('modal-show');
 });
 
-document.addEventListener('keydown', function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    modalBasket.classList.remove('modal-show');
+    if (modalBasket.classList.remove('modal-show')) {
+      evt.preventDefault();
+    }
   }
 });
 
@@ -61,21 +63,61 @@ var textMail = modalFormBack.querySelector('[email-text]');
 var nameUser = modalFormBack.querySelector('[name=user]');
 var email = modalFormBack.querySelector('[name=e-mail]');
 
-linkFormBack.addEventListener("click", function (evt) {
+linkFormBack.addEventListener('click', function (evt) {
   evt.preventDefault();
-  modalFormBack.classList.add('modal-show-form');
+  modalFormBack.classList.add('modal-show');
   nameUser.focus();
+
 });
 
 closeFormBack.addEventListener('click', function () {
-  modalFormBack.classList.remove('modal-show-form');
+  modalFormBack.classList.remove('modal-show');
 });
 
 form.addEventListener('submit', function (evt) {
   if (!nameUser.value || !email.value || !textMail.value) {
     evt.preventDefault();
+  } else {
+    localStorage.setItem('nameUser', nameUser.value);
+    localStorage.setItem('email', email.value);
   }
 });
+
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    if (modalFormBack.classList.remove('modal-show')) {
+      evt.preventDefault();
+    }
+  }
+});
+
+
+
+
+// Карта
+
+var modalMap = document.querySelector('.modal-map');
+var openModalMap = document.querySelector('.map');
+var closeModalMap = modalMap.querySelector('.modal-close');
+
+openModalMap.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalMap.classList.add('modal-show');
+});
+
+closeModalMap.addEventListener('click', function () {
+  modalMap.classList.remove('modal-show');
+});
+
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    if (modalMap.classList.remove('modal-show')) {
+      evt.preventDefault();
+    }
+  }
+});
+
+
 
 /**
 
