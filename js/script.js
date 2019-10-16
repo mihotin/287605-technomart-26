@@ -12,7 +12,7 @@ for (var i = 0; i < buyButtons.length; i++) {
   var openModalBasket = buyButtons[i];
   openModalBasket.addEventListener("click", function (evt) {
     evt.preventDefault();
-    modalBasket.classList.add('modal-basket-show');
+    modalBasket.classList.add('modal-show');
     basket.classList.add('basket-full');
     makeOrderBtn.focus();
     sum += 1;
@@ -21,17 +21,17 @@ for (var i = 0; i < buyButtons.length; i++) {
 }
 
 closeModalBasket.addEventListener('click', function () {
-  modalBasket.classList.remove('modal-basket-show');
+  modalBasket.classList.remove('modal-show');
 });
 
 nextSale.addEventListener("click", function (evt) {
   evt.preventDefault();
-  modalBasket.classList.remove('modal-basket-show');
+  modalBasket.classList.remove('modal-show');
 });
 
 document.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    modalBasket.classList.remove('modal-basket-show');
+    modalBasket.classList.remove('modal-show');
   }
 });
 
@@ -51,6 +51,31 @@ for (var step = 0; step < toBookmarks.length; step++) {
   });
 }
 
+// Скрипт модального окна 'Формы обратной связи'
+
+var modalFormBack = document.querySelector('.modal-form-back');
+var linkFormBack = document.querySelector('.button-contacts');
+var closeFormBack = modalFormBack.querySelector('.modal-close');
+var form = modalFormBack.querySelector('form');
+var textMail = modalFormBack.querySelector('[email-text]');
+var nameUser = modalFormBack.querySelector('[name=user]');
+var email = modalFormBack.querySelector('[name=e-mail]');
+
+linkFormBack.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalFormBack.classList.add('modal-show-form');
+  nameUser.focus();
+});
+
+closeFormBack.addEventListener('click', function () {
+  modalFormBack.classList.remove('modal-show-form');
+});
+
+form.addEventListener('submit', function (evt) {
+  if (!nameUser.value || !email.value || !textMail.value) {
+    evt.preventDefault();
+  }
+});
 
 /**
 
