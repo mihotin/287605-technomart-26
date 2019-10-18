@@ -79,19 +79,14 @@ try {
 linkFormBack.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalFormBack.classList.add('modal-show');
-  if (storageName) {
-    nameUser.value = storageName;
-    email.focus();
-  }
-    else { 
-    nameUser.focus();
-  } 
-
   if (storageName && storageEmail) {
     nameUser.value = storageName;
     email.value = storageEmail;
     textMail.focus();
   }
+  else { 
+    nameUser.focus();
+  } 
 });
 
 form.addEventListener('submit', function (evt) {
