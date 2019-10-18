@@ -12,7 +12,7 @@ for (var i = 0; i < buyButtons.length; i++) {
   var openModalBasket = buyButtons[i];
   openModalBasket.addEventListener("click", function (evt) {
     evt.preventDefault();
-    modalBasket.classList.add('modal-show');
+    modalBasket.classList.add('modal-show-basket');
     basket.classList.add('basket-full');
     makeOrderBtn.focus();
     sum += 1;
@@ -21,17 +21,17 @@ for (var i = 0; i < buyButtons.length; i++) {
 }
 
 closeModalBasket.addEventListener('click', function () {
-  modalBasket.classList.remove('modal-show');
+  modalBasket.classList.remove('modal-show-basket');
 });
 
 nextSale.addEventListener("click", function (evt) {
   evt.preventDefault();
-  modalBasket.classList.remove('modal-show');
+  modalBasket.classList.remove('modal-show-basket');
 });
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    if (modalBasket.classList.remove('modal-show')) {
+    if (modalBasket.classList.remove('modal-show-basket')) {
       evt.preventDefault();
     }
   }
@@ -59,40 +59,70 @@ var modalFormBack = document.querySelector('.modal-form-back');
 var linkFormBack = document.querySelector('.button-contacts');
 var closeFormBack = modalFormBack.querySelector('.modal-close');
 var form = modalFormBack.querySelector('form');
-var textMail = modalFormBack.querySelector('[email-text]');
+var textMail = modalFormBack.querySelector('[name=email-text]');
 var nameUser = modalFormBack.querySelector('[name=user]');
 var email = modalFormBack.querySelector('[name=e-mail]');
+
+var isStorageSupport = true;
+var storageName = "";
+var storageEmale = "";
+var storageMale = "";
+
+try {
+  storageName = localStorage.getItem("nameUser");
+  storageEmail = localStorage.getItem("email");
+  storageMale = localStorage.getItem("textMail");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 linkFormBack.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalFormBack.classList.add('modal-show');
-  nameUser.focus();
+  if (storageName) {
+    nameUser.value = storageName;
+    email.focus();
+  }
+    else { 
+    nameUser.focus();
+  } 
 
-});
-
-closeFormBack.addEventListener('click', function () {
-  modalFormBack.classList.remove('modal-show');
+  if (storageName && storageEmail) {
+    nameUser.value = storageName;
+    email.value = storageEmail;
+    textMail.focus();
+  }
 });
 
 form.addEventListener('submit', function (evt) {
   if (!nameUser.value || !email.value || !textMail.value) {
     evt.preventDefault();
+    modalFormBack.classList.remove("modal-error");
+    modalFormBack.offsetWidth = modalFormBack.offsetWidth;
+    modalFormBack.classList.add('modal-error');
   } else {
-    localStorage.setItem('nameUser', nameUser.value);
-    localStorage.setItem('email', email.value);
-  }
-});
-
-window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === 27) {
-    if (modalFormBack.classList.remove('modal-show')) {
-      evt.preventDefault();
+    if (isStorageSupport) {
+      localStorage.setItem("nameUser", nameUser.value);
+      localStorage.setItem("email", email.value);
+      localStorage.setItem("textMail", textMail.value);
     }
   }
 });
 
+closeFormBack.addEventListener('click', function () {
+  modalFormBack.classList.remove('modal-show');
+  modalFormBack.classList.remove('modal-error');
+});
 
-
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (modalFormBack.classList.contains('modal-show')) {
+      modalFormBack.classList.remove('modal-show');
+      modalFormBack.classList.remove('modal-error');
+    }
+  }
+});
 
 // Карта
 
@@ -116,8 +146,6 @@ window.addEventListener('keydown', function (evt) {
     }
   }
 });
-
-
 
 /**
 
