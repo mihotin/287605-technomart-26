@@ -6,6 +6,7 @@ var makeOrderBtn = modalBasket.querySelector('.make-order-btn');
 var buyButtons = document.querySelectorAll('.buy');
 var basket = document.querySelector('.basket');
 var numbersProductBasket = basket.querySelector('span');
+var overlayBasket = document.querySelector('.overlay');
 var sum = 0;
 
 for (var i = 0; i < buyButtons.length; i++) {
@@ -13,6 +14,7 @@ for (var i = 0; i < buyButtons.length; i++) {
   openModalBasket.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalBasket.classList.add('modal-show-basket');
+    overlayBasket.classList.add('overlay-show');
     basket.classList.add('basket-full');
     makeOrderBtn.focus();
     sum += 1;
@@ -22,19 +24,28 @@ for (var i = 0; i < buyButtons.length; i++) {
 
 closeModalBasket.addEventListener('click', function () {
   modalBasket.classList.remove('modal-show-basket');
+  overlayBasket.classList.remove('overlay-show');
 });
 
 nextSale.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalBasket.classList.remove('modal-show-basket');
+  overlayBasket.classList.remove('overlay-show');
 });
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    if (modalBasket.classList.remove('modal-show-basket')) {
-      evt.preventDefault();
+    evt.preventDefault();
+    if (modalBasket.classList.contains('modal-show-basket')) {
+      modalBasket.classList.remove('modal-show-basket');
+      overlay.classList.remove('overlay-show');
     }
   }
+});
+
+overlayBasket.addEventListener('click', function () {
+  modalBasket.classList.remove('modal-show-basket');
+  overlayBasket.classList.remove('overlay-show');
 });
 
 // Скрипт добавления товара в закладки
@@ -62,6 +73,7 @@ var form = modalFormBack.querySelector('form');
 var textMail = modalFormBack.querySelector('[name=email-text]');
 var nameUser = modalFormBack.querySelector('[name=user]');
 var email = modalFormBack.querySelector('[name=e-mail]');
+var overlayForm = document.querySelector('.overlay');
 
 var isStorageSupport = true;
 var storageName = "";
@@ -69,9 +81,9 @@ var storageEmale = "";
 var storageMale = "";
 
 try {
-  storageName = localStorage.getItem("nameUser");
-  storageEmail = localStorage.getItem("email");
-  storageMale = localStorage.getItem("textMail");
+  storageName = localStorage.getItem('nameUser');
+  storageEmail = localStorage.getItem('email');
+  storageMale = localStorage.getItem('textMail');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -79,27 +91,27 @@ try {
 linkFormBack.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalFormBack.classList.add('modal-show');
+  overlayForm.classList.add('overlay-show');
   if (storageName && storageEmail) {
     nameUser.value = storageName;
     email.value = storageEmail;
     textMail.focus();
-  }
-  else { 
+  } else {
     nameUser.focus();
-  } 
+  }
 });
 
 form.addEventListener('submit', function (evt) {
   if (!nameUser.value || !email.value || !textMail.value) {
     evt.preventDefault();
-    modalFormBack.classList.remove("modal-error");
+    modalFormBack.classList.remove('modal-error');
     modalFormBack.offsetWidth = modalFormBack.offsetWidth;
     modalFormBack.classList.add('modal-error');
   } else {
     if (isStorageSupport) {
-      localStorage.setItem("nameUser", nameUser.value);
-      localStorage.setItem("email", email.value);
-      localStorage.setItem("textMail", textMail.value);
+      localStorage.setItem('nameUser', nameUser.value);
+      localStorage.setItem('email', email.value);
+      localStorage.setItem('textMail', textMail.value);
     }
   }
 });
@@ -107,6 +119,7 @@ form.addEventListener('submit', function (evt) {
 closeFormBack.addEventListener('click', function () {
   modalFormBack.classList.remove('modal-show');
   modalFormBack.classList.remove('modal-error');
+  overlayForm.classList.remove('overlay-show');
 });
 
 window.addEventListener('keydown', function (evt) {
@@ -115,46 +128,56 @@ window.addEventListener('keydown', function (evt) {
     if (modalFormBack.classList.contains('modal-show')) {
       modalFormBack.classList.remove('modal-show');
       modalFormBack.classList.remove('modal-error');
+      overlayForm.classList.remove('overlay-show');
     }
   }
 });
 
-// Карта
+overlayForm.addEventListener('click', function () {
+  modalFormBack.classList.remove('modal-show');
+  modalFormBack.classList.remove('modal-error');
+  overlayForm.classList.remove('overlay-show');
+});
+
+// Скрипт модального окна 'Карта'
 
 var modalMap = document.querySelector('.modal-map');
 var openModalMap = document.querySelector('.map');
 var closeModalMap = modalMap.querySelector('.modal-close');
+var overlayMap = document.querySelector('.overlay');
 
 openModalMap.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMap.classList.add('modal-show');
+  overlayMap.classList.add('overlay-show');
 });
 
 closeModalMap.addEventListener('click', function () {
   modalMap.classList.remove('modal-show');
+  overlayMap.classList.remove('overlay-show');
 });
 
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    if (modalMap.classList.remove('modal-show')) {
-      evt.preventDefault();
+    evt.preventDefault();
+    if (modalMap.classList.contains('modal-show')) {
+      overlayMap.classList.remove('overlay-show');
+      modalMap.classList.remove('modal-show')
     }
   }
 });
 
-/**
-
-var sliderRadioLeft = document.getElementById('btn-1');
-var sliderRadioRight = document.getElementById('btn-2');
-var sliderBtnLeft = document.querySelector('.prev');
-var sliderBtnRight = document.querySelector('.next');
-
-sliderBtnLeft.addEventListener('click', function () {
-  sliderRadioLeft.setAttribute('checked', 'checked');
-  sliderRadioRight.removeAttribute('checked');
+overlayMap.addEventListener('click', function () {
+  modalMap.classList.remove('modal-show')
+  overlayMap.classList.remove('overlay-show');
 });
 
-sliderBtnRight.addEventListener('click', function () {
-  sliderRadioRight.setAttribute('checked', 'checked');
-  sliderRadioLeft.removeAttribute('checked');
-}); */
+// Скрипт кнопок слайдера промо блока
+
+function checkLeft() {
+  document.getElementById('btn-1').checked = true;
+}
+
+function checkRight() {
+  document.getElementById('btn-2').checked = true;
+}

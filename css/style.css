@@ -107,20 +107,20 @@ input[type="search"]::placeholder {
 
   border: none;
   background-color: #293449;
-  
+
   cursor: pointer;
   fill: #69717f;
 }
 
 input[type="search"]:hover,
-input[type="search"]:hover + .search-btn {
+input[type="search"]:hover+.search-btn {
   background-color: #212a3a;
 
   fill: #ffffff;
 }
 
 input[type="search"]:focus,
-input[type="search"]:focus + .search-btn {
+input[type="search"]:focus+.search-btn {
   background-color: #ffffff;
   color: #000000;
 
@@ -136,7 +136,7 @@ input[type="search"]:focus + .search-btn {
 
 .search-btn:focus {
   background-color: #ffffff;
-  
+
   outline: none;
 
   fill: #ee3643;
@@ -157,7 +157,7 @@ input[type="search"]:focus + .search-btn {
 .order-menu .basket,
 .order-menu .order {
   display: block;
- 
+
   width: 150px;
   min-height: 42px;
 
@@ -322,7 +322,7 @@ input[type="search"]:focus + .search-btn {
 
 .phone {
   display: block;
-  
+
   position: relative;
 
   width: 270px;
@@ -366,7 +366,7 @@ input[type="search"]:focus + .search-btn {
 
 .authorization {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
 
   width: 310px;
@@ -598,7 +598,7 @@ input[type="search"]:focus + .search-btn {
 
 .main-menu-list a {
   display: block;
- 
+
   min-height: 60px;
 
   font-size: 17px;
@@ -609,7 +609,7 @@ input[type="search"]:focus + .search-btn {
   box-shadow: inset 0px -5px 0 0 #293449;
 
   padding: 20px 30px 20px 30px;
-  
+
 }
 
 .main-menu-list a:hover:not(.current),
@@ -1076,7 +1076,7 @@ input[type="search"]:focus + .search-btn {
 }
 
 .pagination-list .next {
-  padding: 10px 32px 9px 32px; 
+  padding: 10px 32px 9px 32px;
 }
 
 .pagination-item:hover,
@@ -1252,14 +1252,14 @@ input[type="search"]:focus + .search-btn {
   background-image: url(../img/slider-image-dril.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-color:#4f3d29;
+  background-color: #4f3d29;
 }
 
 .perf {
   background-image: url(../img/slide-image-perf.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-color:#4f3d29;
+  background-color: #4f3d29;
 }
 
 .slider-controls {
@@ -1379,7 +1379,7 @@ input[type="search"]:focus + .search-btn {
   position: relative;
 
   background-color: #ffffff;
- 
+
   cursor: pointer;
 }
 
@@ -1388,7 +1388,7 @@ input[type="search"]:focus + .search-btn {
   box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
-.focus:focus + .active {
+.focus:focus+.active {
   display: flex;
 }
 
@@ -2014,7 +2014,7 @@ input[type="search"]:focus + .search-btn {
 
   top: 50%;
   left: 50%;
- 
+
   margin-top: -145px;
   margin-left: -310px;
 
@@ -2059,7 +2059,7 @@ input[type="search"]:focus + .search-btn {
   min-height: 112px;
 
   margin: 0;
-  padding-top:37px;
+  padding-top: 37px;
   padding-left: 80px;
 
   list-style: none;
@@ -2118,7 +2118,7 @@ input[type="search"]:focus + .search-btn {
 
   top: 50%;
   left: 50%;
- 
+
   display: none;
 
   margin-top: -215px;
@@ -2275,6 +2275,22 @@ input[type="search"]:focus + .search-btn {
   z-index: 25;
 }
 
+.overlay {
+  display: none;
+
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  z-index: 23;
+}
+
 .modal-map img {
   position: absolute;
   top: 0;
@@ -2286,7 +2302,6 @@ input[type="search"]:focus + .search-btn {
   position: relative;
   z-index: 25;
 }
-
 
 .modal-map .modal-close,
 .modal-basket .modal-close,
@@ -2314,6 +2329,8 @@ input[type="search"]:focus + .search-btn {
 
 .modal-show-basket {
   display: flex;
+
+  animation: scale 0.3s;
 }
 
 .modal-show {
@@ -2322,11 +2339,16 @@ input[type="search"]:focus + .search-btn {
   animation: bounce 0.6s;
 }
 
+.overlay-show {
+  display: block;
+}
+
 .modal-error {
   animation: shake 0.6s;
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
@@ -2363,6 +2385,16 @@ input[type="search"]:focus + .search-btn {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -2415,7 +2447,7 @@ input[type="search"]:focus + .search-btn {
 .main-menu-list {
   display: flex;
   flex-wrap: wrap;
-  
+
   align-items: center;
 
   width: 100%;
@@ -2513,7 +2545,7 @@ input[type="search"]:focus + .search-btn {
   height: 100%;
 
   padding-bottom: 20px;
-  
+
   background-color: #ffffff;
   border: solid 1px #eaeaea;
 }
@@ -2554,7 +2586,7 @@ input[type="search"]:focus + .search-btn {
 
   width: 220px;
   height: 145px;
-  
+
 
   margin-bottom: 20px;
 }
@@ -2630,7 +2662,7 @@ input[type="search"]:focus + .search-btn {
 
 .company-info {
   display: block;
-  
+
   width: 520px;
 }
 
@@ -2805,7 +2837,7 @@ input[type="search"]:focus + .search-btn {
 
 .main-catalog-title {
   display: block;
-  
+
   margin: 0;
   padding: 31px 28px 28px 28px;
 }
