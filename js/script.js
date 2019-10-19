@@ -16,7 +16,6 @@ for (var i = 0; i < buyButtons.length; i++) {
     modalBasket.classList.add('modal-show-basket');
     overlayBasket.classList.add('overlay-show');
     basket.classList.add('basket-full');
-    makeOrderBtn.focus();
     sum += 1;
     numbersProductBasket.textContent = sum;
   });
@@ -38,7 +37,7 @@ window.addEventListener('keydown', function (evt) {
     evt.preventDefault();
     if (modalBasket.classList.contains('modal-show-basket')) {
       modalBasket.classList.remove('modal-show-basket');
-      overlay.classList.remove('overlay-show');
+      overlayBasket.classList.remove('overlay-show');
     }
   }
 });
