@@ -173,10 +173,14 @@ overlayMap.addEventListener('click', function () {
 
 // Скрипт кнопок слайдера промо блока
 
-function checkLeft() {
-  document.getElementById('btn-1').checked = true;
-}
+var sliderShow = document.querySelector('.slider');
+var clickRight = sliderShow.querySelector('.next');
+var clickLeft = sliderShow.querySelector('.prev');
 
-function checkRight() {
+clickRight.addEventListener('click', function () {
   document.getElementById('btn-2').checked = true;
-}
+});
+
+clickLeft.addEventListener('click', function () {
+  document.getElementById('btn-1').checked = true;
+});
