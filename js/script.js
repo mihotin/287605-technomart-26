@@ -13,7 +13,7 @@ if (document.querySelector('.modal-basket')) {
 
   for (var i = 0; i < buyButtons.length; i++) {
     var openModalBasket = buyButtons[i];
-    openModalBasket.addEventListener("click", function (evt) {
+    openModalBasket.addEventListener('click', function (evt) {
       evt.preventDefault();
       modalBasket.classList.add('modal-show-basket');
       overlay.classList.add('overlay-show');
@@ -28,7 +28,7 @@ if (document.querySelector('.modal-basket')) {
     overlay.classList.remove('overlay-show');
   });
 
-  nextSale.addEventListener("click", function (evt) {
+  nextSale.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalBasket.classList.remove('modal-show-basket');
     overlay.classList.remove('overlay-show');
@@ -59,7 +59,7 @@ if (document.querySelectorAll('.to-bookmark')) {
 
   for (var step = 0; step < toBookmarks.length; step++) {
     var toBookmark = toBookmarks[step];
-    toBookmark.addEventListener("click", function (evt) {
+    toBookmark.addEventListener('click', function (evt) {
       evt.preventDefault();
       resulte += 1;
       numbersProductBookmark.textContent = resulte;
@@ -78,9 +78,9 @@ if (document.querySelector('.modal-form-back')) {
   var email = modalFormBack.querySelector('[name=e-mail]');
 
   var isStorageSupport = true;
-  var storageName = "";
-  var storageEmale = "";
-  var storageMale = "";
+  var storageName = '';
+  var storageEmale = '';
+  var storageMale = '';
 
   try {
     storageName = localStorage.getItem('nameUser');
@@ -148,7 +148,7 @@ if (document.querySelector('.modal-map')) {
   var openModalMap = document.querySelector('.map');
   var closeModalMap = modalMap.querySelector('.modal-close');
 
-  openModalMap.addEventListener("click", function (evt) {
+  openModalMap.addEventListener('click', function (evt) {
     evt.preventDefault();
     modalMap.classList.add('modal-show');
     overlay.classList.add('overlay-show');
